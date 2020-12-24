@@ -42,9 +42,9 @@ const FaqSection = () => {
         <Faq>
             <h2>Any Questions <span>FAQ</span></h2>
             {faqs.map(faq => {
-                const { question, answer } = faq
+                const { question, answer, id } = faq
                 return (
-                    <div className="question">
+                    <div key={id} className="question">
                         <h4>{question}</h4>
                         <div className="answer">
                             <p>Lorem ipsum dolor sit amet.</p>
