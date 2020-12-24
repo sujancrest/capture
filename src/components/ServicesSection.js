@@ -17,25 +17,25 @@ const ServicesSection = () => {
             id: uuidv4(),
             icon: clock,
             title: "Efficient",
-            descrition: "Lorem ipsum dolor sit amet.",
+            description: "Lorem ipsum dolor sit amet.",
         },
         {
             id: uuidv4(),
             icon: diaphragm,
             title: "Diaphragm",
-            descrition: "Lorem ipsum dolor sit amet.",
+            description: "Lorem ipsum dolor sit amet.",
         },
         {
             id: uuidv4(),
             icon: money,
             title: "Affordable",
-            descrition: "Lorem ipsum dolor sit amet.",
+            description: "Lorem ipsum dolor sit amet.",
         },
         {
             id: uuidv4(),
             icon: teamwork,
             title: "Affordable",
-            descrition: "Lorem ipsum dolor sit amet.",
+            description: "Lorem ipsum dolor sit amet.",
         },
     ])
 
@@ -45,13 +45,14 @@ const ServicesSection = () => {
                 <h2>High <span>qualtiy</span> services</h2>
                 <Cards>
                     {services.map(service => {
+                        const { icon, title, description } = service;
                         return (
                             <Card key={service.id}>
                                 <div className="icon">
                                     <img src={service.icon} alt="Icons" />
                                     <h3>{service.title}</h3>
                                 </div>
-                                <p>{service.descrition}</p>
+                                <p>{service.description}</p>
                             </Card>
                         )
                     })}
